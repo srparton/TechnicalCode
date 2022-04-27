@@ -35,16 +35,17 @@ public final class Chop{
 
     public synchronized void get_R (int me) {
         // int score = 0 ; // pseudo program counter used for transcripting the Java code in Ada while ( !available [me]) {
-            if(me == 0){
-                System.out.println("Diner 4 has right fork "+me);
-            } else
-                System.out.println("Diner "+(me-1)+" has right fork "+me);
+            
             while(!available[me]){
             try { 
                 wait(); 
             } catch (InterruptedException e) {} 
         }
         available[me] = false ; 
+        if(me == 0){
+            System.out.println("Diner 4 has right fork "+me);
+        } else
+            System.out.println("Diner "+(me-1)+" has right fork "+me);
         // System.out.println("Diner "+thread_id+" has right fork "+me);
 
         // score = 1; // left stick allocated

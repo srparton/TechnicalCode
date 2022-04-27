@@ -1,0 +1,60 @@
+Diner 1 is sitting down at the table.
+Diner 3 is sitting down at the table.
+Diner 4 is sitting down at the table.
+Diner 2 is sitting down at the table.
+Diner 0 is sitting down at the table.
+Diner 1 says they are thinking.
+Diner 0 says they are thinking.
+Diner 2 says they are thinking.
+Diner 4 says they are thinking.
+Diner 3 says they are thinking.
+Diner 2 says they are hungry.
+Diner 2 has left fork 2
+Diner 2 has right fork 3
+Diner 3 says they are hungry.
+Diner 0 says they are hungry.
+Diner 0 has left fork 0
+Diner 0 has right fork 1
+Diner 4 says they are hungry.
+Diner 4 has left fork 4
+Diner 1 says they are hungry.
+Diner 2 set forks down
+Diner 2 says they are thinking.
+Diner 3 has left fork 3
+Diner 0 set forks down
+Diner 0 says they are thinking.
+Diner 4 has right fork 0
+Diner 1 has left fork 1
+Diner 1 has right fork 2
+Diner 2 says they are hungry.
+Diner 1 set forks down
+Diner 2 has left fork 2
+Diner 1 says they are thinking.
+Diner 4 set forks down
+Diner 3 has right fork 4
+Diner 4 says they are thinking.
+Diner 4 says they are hungry.
+Diner 0 says they are hungry.
+Diner 0 has left fork 0
+Diner 0 has right fork 1
+Diner 1 says they are hungry.
+Diner 0 set forks down
+Diner 0 is full, they are leaving the table.
+Diner 1 has left fork 1
+Diner 3 set forks down
+Diner 3 says they are thinking.
+Diner 2 has right fork 3
+Diner 4 has left fork 4
+Diner 4 has right fork 0
+Diner 4 set forks down
+Diner 4 is full, they are leaving the table.
+Diner 3 says they are hungry.
+Diner 2 set forks down
+Diner 2 is full, they are leaving the table.
+Diner 1 has right fork 2
+Diner 3 has left fork 3
+Diner 3 has right fork 4
+Diner 3 set forks down
+Diner 3 is full, they are leaving the table.
+Diner 1 set forks down
+Diner 1 is full, they are leaving the table.
