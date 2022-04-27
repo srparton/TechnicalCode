@@ -1,17 +1,11 @@
-import java.util.concurrent.Semaphore;
 import java.lang.Thread;
 import java.util.concurrent.ThreadLocalRandom;
-
-// import MyChop.Chop;
-
 public class DiningPhil extends Thread {
 // public class DiningPhil {
     
     public int thread_id; // Used in constructor for DiningPhil
-    //private static final int MAX_TIME = 10000; // May not be needed in java
     private static final int EAT = 2; //How many times should each philo eat
     private static final int DINERS_NUM = 5; //Number of philos
-    private static Semaphore[] forks = new Semaphore[DINERS_NUM];// Array of semaphrores for forks.
     private static Chop myChop = new Chop(DINERS_NUM);
 
     public DiningPhil(int id) {
