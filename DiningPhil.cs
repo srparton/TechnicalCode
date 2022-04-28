@@ -9,7 +9,7 @@ public class DiningPhil
     {
         private int N;
         private bool[] available;
-
+        
         public Chop(int num)
         {
             N = num;
@@ -56,21 +56,26 @@ public class DiningPhil
                     Console.WriteLine(e.StackTrace);
                 }
             }
+
             available[me] = false;
             if (me == 0)
             {
                 Console.WriteLine("Diner " + me + " has right fork " + me);
             }
+
             else
                 Console.WriteLine("Diner " + (me - 1) + " has right fork " + me);
         }
 
         public void release(int me)
         {
-            available[me] = true;
-            available[(me + 1) % N] = true;
-            Console.WriteLine("Diner " + me + " set forks down");
-            Monitor.PulseAll(this);
+            lock (this)
+            {
+                available[me] = true;
+                available[(me + 1) % N] = true;
+                Console.WriteLine("Diner " + me + " set forks down");
+                Monitor.PulseAll(this);
+            }
         }
 
         
