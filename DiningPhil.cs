@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-
-
 public class DiningPhil
 {
     internal class Chop
@@ -19,7 +17,7 @@ public class DiningPhil
 
             for (int i = 0; i < N; i++)
             {
-                this.available[i] = true; // non allocated stick }
+                this.available[i] = true; 
             }
         }
 
@@ -72,22 +70,15 @@ public class DiningPhil
             available[me] = true;
             available[(me + 1) % N] = true;
             Console.WriteLine("Diner " + me + " set forks down");
-            Monitor.Pulse(this);
+            Monitor.PulseAll(this);
         }
 
-        // public void run() {
-        //     try {
-        //         get_LR(thread_id);
-        //     } catch (Exception e) {
-        //         e.printStackTrace();
-        //     }
-        // }
+        
     }
-    // public class DiningPhil {
-
-    public int thread_id; // Used in constructor for DiningPhil
-    private static int EAT = 2; //How many times should each philo eat
-    private static int DINERS_NUM = 5; //Number of philos
+    
+    public int thread_id;
+    private static int EAT = 2;
+    private static int DINERS_NUM = 5;
     private static Chop myChop = new Chop(DINERS_NUM);
 
     public DiningPhil(int id) => this.thread_id = id;
@@ -100,7 +91,7 @@ public class DiningPhil
         while (timesEaten < EAT)
         {
             Random r = new Random();
-            int sleepTime = r.Next(10000);
+            int sleepTime = r.Next(2000);
             Console.WriteLine("Diner " + thread_id + " says they are thinking.");
             try
             {
@@ -109,11 +100,11 @@ public class DiningPhil
             catch (ThreadInterruptedException e)
             {
                 Console.WriteLine(e.StackTrace);
-            } //Diner "Thinks"
+            }
             Console.WriteLine("Diner " + thread_id + " says they are hungry.");
             myChop.get_LR(thread_id);
             timesEaten++;
-            sleepTime = r.Next(10000);
+            sleepTime = r.Next(2000);
             try
             {
                 Thread.Sleep(sleepTime);
@@ -121,7 +112,7 @@ public class DiningPhil
             catch (ThreadInterruptedException e)
             {
                 Console.WriteLine(e.StackTrace);
-            } //Diner "eats" for rand time between 0 and 2 seconds
+            }
 
             myChop.release(thread_id);
         }
